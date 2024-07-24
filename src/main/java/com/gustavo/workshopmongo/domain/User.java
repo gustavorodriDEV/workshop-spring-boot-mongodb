@@ -3,11 +3,16 @@ package com.gustavo.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	private String id;
-	private String nmae;
+	private String name;
 	private String email;
 
 	public User() {
@@ -16,7 +21,7 @@ public class User implements Serializable {
 	public User(String id, String nmae, String email) {
 		super();
 		this.id = id;
-		this.nmae = nmae;
+		this.name = nmae;
 		this.email = email;
 	}
 
@@ -25,7 +30,7 @@ public class User implements Serializable {
 	}
 
 	public String getNmae() {
-		return nmae;
+		return name;
 	}
 
 	public String getEmail() {
@@ -37,7 +42,7 @@ public class User implements Serializable {
 	}
 
 	public void setNmae(String nmae) {
-		this.nmae = nmae;
+		this.name = nmae;
 	}
 
 	public void setEmail(String email) {
