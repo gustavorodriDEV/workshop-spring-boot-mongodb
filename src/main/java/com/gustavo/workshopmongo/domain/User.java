@@ -29,7 +29,7 @@ public class User implements Serializable {
 		return id;
 	}
 
-	public String getNmae() {
+	public String getName() {
 		return name;
 	}
 
@@ -41,7 +41,7 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
-	public void setNmae(String nmae) {
+	public void setName(String nmae) {
 		this.name = nmae;
 	}
 
