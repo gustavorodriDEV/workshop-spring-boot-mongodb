@@ -59,7 +59,7 @@ public class UserResources {
     @PutMapping("/{id}")
     public ResponseEntity<Void> update(@PathVariable String id, @RequestBody UserDTO objDto) {
         User obj = services.fromDTO(objDto);
-        obj.setId(id); // Assegura que o ID do objeto a ser atualizado é o correto
+        obj.setId(id); 
         services.update(obj);
         return ResponseEntity.noContent().build();
     }
